@@ -1,15 +1,13 @@
 # yieldo.py
 #
-# Example of a coroutine-based scheduler
+# 基于协程的调度器示例
 
 import time
 from collections import deque
 import heapq
 
 
-# Plumbing that makes the "await" statement work.  We provide
-# a single function "switch" that is used by the schedule to
-# switch tasks.
+# 使 await 语句正常工作的底层实现。我们提供了一个名为 switch 的函数，调度器使用它来切换任务。
 
 class Awaitable:
     def __await__(self):
@@ -24,7 +22,7 @@ class Scheduler:
     def __init__(self):
         self.ready = deque()
         self.sleeping = []
-        self.current = None  # Currently executing generator
+        self.current = None  # 当前正在执行的生成器
         self.sequence = 0
 
     async def sleep(self, delay):

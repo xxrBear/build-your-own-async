@@ -26,9 +26,3 @@ def countup(stop):
 # Example of sequential execution
 countdown(5)
 countup(5)
-
-# Example of concurrent execution (via threads)
-import threading
-
-threading.Thread(target=countdown, args=(5,)).start()
-threading.Thread(target=countup, args=(5,)).start()
