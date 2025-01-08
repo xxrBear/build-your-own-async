@@ -5,6 +5,9 @@
 deque: 快速创建双端队列
 参考： https://blog.csdn.net/weixin_43790276/article/details/107749745
 
+heapq: python 实现 堆
+参考：https://blog.csdn.net/weixin_43790276/article/details/107741332
+
 任务调度器实现3
 
 1.heapq 替换 sleeping 列表
